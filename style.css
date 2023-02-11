@@ -46,27 +46,34 @@ table {
 
 body {
   background: #1a1a1a;
-  height: 100vh;
   overflow: hidden;
   text-align: center;
 
   font-family: 'Inter', sans-serif;
+}
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 header {
   display: flex;
 
   align-items: center;
-  margin: 39px 36px 0 108px;
-
+  justify-content: center;
+  /* margin: 39px 36px 0 108px; */
 }
 
-.nav_buttons {
+/* .nav_buttons {
   margin: 0 114px 0 0;
+  display: none;
+} */
 
-}
 
-.button {
+
+/* .button {
   display: inline-block;
 
   font-size: 20px;
@@ -75,62 +82,66 @@ header {
   border: 1px solid #FFFFFF;
   border-radius: 53px;
   transition: 0.3s;
-}
+} */
 
-.button:hover{
+/* .button:hover{
   scale: 1.1;
-  border: 1px solid #d68383;
-}
+  border: 1px solid rgba(251, 109, 109, 0);
+} */
 
-.button a {
+/* .button a {
   text-decoration: none;
   color: white;
 }
 
 .nav_buttons> *:not(:last-child) {
   margin-right: 29px;
-}
+} */
 
 .header_logo{
   color: white;
   font-size: 50px;
   font-weight: bold;
-  /* margin-top: 39px; */
+  margin-top: 39px;
 }
 
-.user_data {
+/* .user_data {
   display: flex;
   align-items: center;
 
   color: white;
   font-size: 25px;
   font-weight: bold;
-}
+} */
 
-.user_name{
+/* .user_name{
   margin: 0 14px 0 442px;
-}
+} */
 
 .cards_wrapper{
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
-  display: flex;
+
 }
 
 .card{
   height: 300px;
   width: 200px;
-  margin-right: 51px;
   background: #202020;
   border-radius: 30px;
   text-align: center;
   color: white;
   text-decoration: none;
   transition: 0.3s;
+}
+
+.card:not(:last-child){
+  margin-right: 51px;
 }
 
 .card:hover{
@@ -160,4 +171,17 @@ header {
 
 .card> *:not(:last-child) {
   margin-bottom: 10px;
+}
+
+footer{
+  /* margin-top: auto; */
+  height: 150px;
+  width: 100%;
+}
+
+.copyright{
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 820px;
 }
