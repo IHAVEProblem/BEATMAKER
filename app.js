@@ -1,36 +1,27 @@
-// let Auto = document.getElementById('Autotune')
-// let complete = document.getElementById('Complete')
-// let flstudio = document.getElementById('FLstudio')
+let lightMode = localStorage.getItem('lightMode')
 
-// let buttons = document.getElementById("dwbuttons")
+const lightModeToggle = document.querySelector('#light-mode-toggle')
 
+const enableLightMode = () => {
+  document.body.classList.add('lightmode')
+  localStorage.setItem('lightMode', 'enabled')
+}
 
-// function downloadURI(e) {
+const disableLightMode = () => {
+  document.body.classList.remove('lightmode')
+  localStorage.setItem('lightMode', null)
+}
 
-//   let link = document.createElement("a");
+if (lightMode === 'enabled') {
+  enableLightMode();
+}
 
-//   link.setAttribute('download', e.dataset.name);
-//   link.href = e.dataset.uri;
-//   document.body.appendChild(link);
-//   link.click();
-//   link.remove();
+lightModeToggle.addEventListener('click', () => {
+  lightMode = localStorage.getItem('lightMode')
 
-// }
-
-// Auto.onclick = function(){
-//   setTimeout(
-//     downloadURI(Auto), 1000
-//   )
-// }
-
-// complete.onclick = function(){
-//   setTimeout(
-//     downloadURI(complete), 1000
-//   )
-// }
-
-// flstudio.onclick = function(){
-//   setTimeout(
-//     downloadURI(flstudio), 1000
-//   )
-// }
+  if (lightMode !== 'enabled') {
+    enableLightMode();
+  } else {
+    disableLightMode();
+  }
+})

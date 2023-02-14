@@ -5,16 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>HZ^3</title>
+  <title>BEATMAKER</title>
+  <script src="app.js" defer></script>
 </head>
 <body>
   <div class="flex-wrapper">
     <header>
       <h1 class="header_logo"><span tabindex="1">БИТМЕЙКЕРСКАЯ</span></h1>
+      <button
+        class="light-mode-toggle"
+        id="light-mode-toggle"
+        aria-label="toggle light mode"
+      >
+        <svg
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 496"
+          >
+            <path
+            fill="currentColor"
+            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/>
+        </svg>
+      </button>
     </header>
   <main id='dwbuttons' class=" page">
+    <!-- add seacrhable and tags -->
+      <!-- <div class="topnav">
+        <input type="text" placeholder="Search..">
+      </div> -->
+      <!-- ------------------------------------- -->
     <div class="cards_wrapper _container">
-      <a class="card" id="Autotune" data-name="Antares - Auto-Tune Pro X v10.1.0 Rev2.torrent" data-uri="Antares - Auto-Tune    Pro X v10.1.0 Rev2.torrent" href="source/Antares - Auto-Tune Pro X v10.1.0 Rev2.torrent" download>
+      <a class="card" id="Autotune" href="source/Antares - Auto-Tune Pro X v10.1.0 Rev2.torrent" download>
         <img class="card_image" src="img/antares 1.svg" alt="">
         <p class='card_name'>Auto-Tune</p>
         <p class='card_subname'>Antares</p>
@@ -26,11 +47,12 @@
         <p class='card_subname'>Waves</p>
         <p class='card_version'>v14 17.01.23</p>
       </a>
-      <a class="card" id="Complete" href="source/Waves - Complete v2023.02.07 [R2R].torrent" download>
-        <img class="card_image" src="img/waves 1.svg" alt="">
-        <p class='card_name'>Complete</p>
-        <p class='card_subname'>Waves</p>
-        <p class='card_version'>v14 17.01.23</p>
+
+      <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+        <img class="card_image" src="img/flstudio 1.svg" alt="">
+        <p class='card_name'>FL Studio</p>
+        <p class='card_subname'>Image-Line</p>
+        <p class='card_version'>v20.9.2</p>
       </a>
       <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
         <img class="card_image" src="img/flstudio 1.svg" alt="">
@@ -50,6 +72,5 @@
     <p class="copyright">©️ 2023 БИТМЕЙКЕРСКАЯ ALL RIGHTS RESERVED</p>
   </footer>
   </div>
-<script src="app.js" async></script>
 </body>
 </html>
