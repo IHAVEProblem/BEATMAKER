@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>BEATMAKER</title>
-  <script src="app.js" defer></script>
+
 </head>
 <body>
+
   <div class="flex-wrapper">
     <header>
-      <h1 class="header_logo"><span tabindex="1">БИТМЕЙКЕРСКАЯ</span></h1>
+      <h1 class="header_logo"><span tabindex="1">EMPTY</span></h1>
       <button
         class="light-mode-toggle"
         id="light-mode-toggle"
@@ -24,53 +25,217 @@
           >
             <path
             fill="currentColor"
-            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/>
+            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"
+            />
         </svg>
       </button>
     </header>
   <main id='dwbuttons' class=" page">
-    <!-- add seacrhable and tags -->
-      <!-- <div class="topnav">
-        <input type="text" placeholder="Search..">
-      </div> -->
-      <!-- ------------------------------------- -->
-    <div class="cards_wrapper _container">
-      <a class="card" id="Autotune" href="source/Antares - Auto-Tune Pro X v10.1.0 Rev2.torrent" download>
-        <img class="card_image" src="img/antares 1.svg" alt="">
-        <p class='card_name'>Auto-Tune</p>
-        <p class='card_subname'>Antares</p>
-        <p class='card_version'>v10.1.0</p>
-      </a>
-      <a class="card" id="Complete" href="source/Waves - Complete v2023.02.07 [R2R].torrent" download>
-        <img class="card_image" src="img/waves 1.svg" alt="">
-        <p class='card_name'>Complete</p>
-        <p class='card_subname'>Waves</p>
-        <p class='card_version'>v14 17.01.23</p>
-      </a>
+      <div class="main_page _container">
 
-      <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-        <img class="card_image" src="img/flstudio 1.svg" alt="">
-        <p class='card_name'>FL Studio</p>
-        <p class='card_subname'>Image-Line</p>
-        <p class='card_version'>v20.9.2</p>
-      </a>
-      <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-        <img class="card_image" src="img/flstudio 1.svg" alt="">
-        <p class='card_name'>FL Studio</p>
-        <p class='card_subname'>Image-Line</p>
-        <p class='card_version'>v20.9.2</p>
-      </a>
-      <a class="card" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
-        <img class="card_image" src="img/ableton 1.svg" alt="">
-        <p class='card_name'>Live</p>
-        <p class='card_subname'>Ableton</p>
-        <p class='card_version'>11.2.6</p>
-      </a>
-    </div>
+        <!-- RAW CONTAINER -->
+
+        <div class="title">RAW</div>
+        <div class="cards_wrapper _container">
+          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- synth CONTAINER  -->
+
+        <div class="title">SYNTH</div>
+        <div class="cards_wrapper _container">
+          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- PLUGINS  CONTAINER -->
+
+        <div class="title">PLUGINS</div>
+        <!-- search bar -->
+        <div class="searchbar">
+          <form action="" class="search-container">
+            <img src="img/search-svgrepo-com 1.svg" alt="search-icon">
+            <input type="text" name="" id="search-item" placeholder="Введите название..." onkeyup="search();"  onkeydown="return (event.keyCode!=13);">
+          </form>
+        </div>
+        <!-- -------------------- -->
+        <div class="cards_wrapper" id="card-list" >
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
+            <img class="card_image" src="img/flstudio 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>FL Studio</p>
+              <p class='card_subname card_text'>Image-Line</p>
+              <p class='card_version card_text'>v20.9.2</p>
+            </div>
+          </a>
+          <a class="card" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
+            <img class="card_image" src="img/ableton 1.svg" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>Live</p>
+              <p class='card_subname card_text'>Ableton</p>
+              <p class='card_version card_text'>11.2.6</p>
+            </div>
+          </a>
+        </div>
+      </div>
   </main>
+
+  <!-- FOOTER -->
+
   <footer>
+    <div class="dmca">
+      <div class="disclaimer">DMCA</div>
+      <p class="disclaimer-text">EMPTY is in compliance with 17 U.S.C. § 512 and the Digital Millennium Copyright Act
+        (“DMCA”). It is our policy to respond to any infringement notices and take appropriate actions under the Digital
+        Millennium Copyright Act (“DMCA”) and other applicable intellectual property laws.
+        DMCA
+        EMPTY is a hosting site dedicated to hosting trial versions of software with activation tools for educational
+        purposes only. The provided content is stored only on third-party servers. We do not adhere to any kind of copyright
+        infridgement.
+        With that said, DMCA
+        EMPTY is still a public hosting site with a lot of user-generated content.
+        In case of copyright infridgement the supposed content owner should contact dmca related support at:
+        support@empty.com</p>
+    </div>
     <p class="copyright">©️ 2023 БИТМЕЙКЕРСКАЯ ALL RIGHTS RESERVED</p>
+    <a class="credits" href="https://github.com/IHAVEProblem">THANKS TO <span>IHAVEProblem</span></a>
   </footer>
+
+
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
