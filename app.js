@@ -29,6 +29,38 @@ lightModeToggle.addEventListener('click', () => {
 })
 
 
+
+
+// append cards
+
+const cards = [
+  {
+    img: "img/ableton 1.svg",
+    name: "Line",
+    publisher: "Ableton",
+    version: "11.2.6",
+    source: "source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent"
+  },
+  {
+    img: "img/flstudio 1.svg",
+    name: "FL studio",
+    version: "14.14.14"
+  }
+]
+const cardsContainer = document.getElementById("card-list")
+
+for(let i = 0; i < cards.length; i++){
+  cardsContainer.innerHTML += `
+  <a class="card" href="${cards[i].source}" download>
+  <img class="card_image" src="${cards[i].img}" alt="">
+    <div class="card-info">
+      <p class='card_name card_text'>${cards[i].name}</p>
+      <p class='card_subname card_text'>${cards[i].publisher}</p>
+      <p class='card_version card_text'>${cards[i].version}</p>
+    </div>
+  </a>`
+}
+
 // search
 
 const search = () => {
