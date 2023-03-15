@@ -44,8 +44,6 @@ table {
 	border-spacing: 0;
 }
 
-/* roots */
-
 :root {
   --clr-light: #fff;
   --clr-dark: #202020;
@@ -65,7 +63,19 @@ table {
   --background: var(--clr-light);
 }
 
-/* page */
+/* to disable scrollbar */
+
+/* html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+
 body {
   height: 100%;
 
@@ -88,24 +98,15 @@ body {
   flex: 1 1 auto;
 }
 
-
-/* container */
-
-._container {
-  --max-width: 1180px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
-
-/* header */
 .header_logo{
+  display: inline-block;
   font-size: 50px;
   font-weight: bold;
   margin-top: 39px;
   margin-bottom: 46px;
   padding: 10px;
+  text-decoration: none;
+  color: var(--foreground, #fff);
 }
 
 .header_logo > span {
@@ -161,74 +162,145 @@ body {
   scale: 1.1;
 }
 
-/* main */
+/* main card container */
 
-.page-content{
+.cards_wrapper{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  min-height: 332px;
 }
 
-.card {
-  color: #fff;
-
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  transition: all 0.3s;
-  text-decoration: none;
+.cards_wrapper:last-child {
+  min-height: 664px;
 }
 
-.card img{
-  max-width: 500px;
-  object-fit: cover;
-  filter: blur(2px);
-  transition: 0.3s;
+._container {
+  --max-width: 1180px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
 }
 
-.card:hover img{
-  scale: 1.05;
-  filter: blur(4px);
-}
-
-.card-title{
-  font-size: 24px;
+.title{
+  font-size: 32px;
   font-weight: bold;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s;
+  margin: 53px 0;
 }
 
-.text-content{
-  font-size: 18px;
-  width: 300px;
-  opacity: 0;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  transition: 0.3s;
+/* search bar */
+
+.searchbar{
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.card-text{
-  margin-bottom: 10px;
+.searchbar form{
+  display: inline-flex;
+  align-items: center;
+  background: var(--background-middle, #313131);
+  border-radius: 30px;
+  width: 60%;
+  overflow: hidden;
 }
 
-.card:hover .card-title{
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+.searchbar form img {
+  padding: 16px 19px;
 }
 
-.card:hover .text-content{
-  opacity: 1;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -60%);
+.searchbar form input{
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  padding: 10px 0;
+  font-size: 14px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.searchbar input::-webkit-input-placeholder {
+  -webkit-transition:.4s;
+}
+
+.searchbar input:focus::-webkit-input-placeholder {
+  color:transparent;
+}
+
+/* cards inside container*/
+
+.card-visials{
+  height: 300px;
+  width: 200px;
+  background: var(--background-middle, #313131);
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  flex: 0 0 auto;
+  margin: 16px;
+}
+
+.card-visials:hover{
+  scale: 1.1;
+}
+.card-visials:hover .card_name{
+  color: var(--clr-accent);
+}
+
+.card{
+  height: 300px;
+  width: 200px;
+  background: var(--background-middle, #313131);
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  flex: 0 0 auto;
+  margin: 16px;
+}
+
+.card:hover{
+  scale: 1.1;
+}
+.card:hover .card_name{
+  color: var(--clr-accent);
+}
+
+.card_image{
+  padding-top: 22px;
+  max-height: 128px;
+  max-width: 128px;
+  width: 100%;
+  height: 100%;
+}
+
+.card_text:not(:last-child){
+  margin-bottom: 15px;
+}
+
+/* сделай тут через selector :nth-child() */
+
+.card_name {
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.card_subname {
+  font-size: 25px;
+}
+
+.card_version {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 /* footer */

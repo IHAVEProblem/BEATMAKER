@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>BEATMAKER</title>
-
+  <title>EMPTY</title>
+  <script src="app.js" defer></script>
 </head>
 <body>
-
   <div class="flex-wrapper">
+    <!-- HEADER -->
     <header>
       <h1 class="header_logo"><span tabindex="1">EMPTY</span></h1>
       <button
@@ -30,115 +30,60 @@
         </svg>
       </button>
     </header>
-  <main id='dwbuttons' class=" page">
-      <div class="main_page _container">
-
-        <!-- RAW CONTAINER -->
-
-        <div class="title">RAW</div>
-        <div class="cards_wrapper _container">
-          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-            <img class="card_image" src="img/flstudio 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>FL Studio</p>
-              <p class='card_subname card_text'>Image-Line</p>
-              <p class='card_version card_text'>v20.9.2</p>
+    <!-- MAIN CONTENT -->
+    <main class="page">
+      <div class="page-content _container">
+        <a href="plugins/index.html" class="card">
+          <div class="card-content">
+            <img src="img/istockphoto-1145618475-612x612.jpg" alt="">
+            <p class="card-title">PLUGINS</p>
+            <div class="text-content">
+              <p class="card-text">Самые актуальные и свежие плагины, синтезаторы и DAW.</p>
+              <p class="card-version">Latest update 13.03.23: added FL studio, Live abliveron</p>
             </div>
-          </a>
-          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-            <img class="card_image" src="img/flstudio 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>FL Studio</p>
-              <p class='card_subname card_text'>Image-Line</p>
-              <p class='card_version card_text'>v20.9.2</p>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <div class="card-content">
+            <img src="img/istockphoto-1145618475-612x612.jpg" alt="">
+            <p class="card-title">PLUGINS</p>
+            <div class="text-content">
+              <p class="card-text">Самые актуальные и свежие плагины, синтезаторы и DAW.</p>
+              <p class="card-version">Latest update 13.03.23: added FL studio, Live abliveron</p>
             </div>
-          </a>
-          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
-            <img class="card_image" src="img/ableton 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>Live</p>
-              <p class='card_subname card_text'>Ableton</p>
-              <p class='card_version card_text'>11.2.6</p>
+          </div>
+        </a>
+        <a href="#" class="card">
+          <div class="card-content">
+            <img src="img/istockphoto-1145618475-612x612.jpg" alt="">
+            <p class="card-title">PLUGINS</p>
+            <div class="text-content">
+              <p class="card-text">Самые актуальные и свежие плагины, синтезаторы и DAW.</p>
+              <p class="card-version">Latest update 13.03.23: added FL studio, Live abliveron</p>
             </div>
-          </a>
-        </div>
-
-        <!-- synth CONTAINER  -->
-
-        <div class="title">SYNTH</div>
-        <div class="cards_wrapper _container">
-          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-            <img class="card_image" src="img/flstudio 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>FL Studio</p>
-              <p class='card_subname card_text'>Image-Line</p>
-              <p class='card_version card_text'>v20.9.2</p>
-            </div>
-          </a>
-          <a class="card-visials" href="source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent" download>
-            <img class="card_image" src="img/flstudio 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>FL Studio</p>
-              <p class='card_subname card_text'>Image-Line</p>
-              <p class='card_version card_text'>v20.9.2</p>
-            </div>
-          </a>
-          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
-            <img class="card_image" src="img/ableton 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>Live</p>
-              <p class='card_subname card_text'>Ableton</p>
-              <p class='card_version card_text'>11.2.6</p>
-            </div>
-          </a>
-          <a class="card-visials" href="source/Ableton - Live 11 Suite 11.2.6.torrent" download>
-            <img class="card_image" src="img/ableton 1.svg" alt="">
-            <div class="card-info">
-              <p class='card_name card_text'>Live</p>
-              <p class='card_subname card_text'>Ableton</p>
-              <p class='card_version card_text'>11.2.6</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- PLUGINS  CONTAINER -->
-
-        <div class="title">PLUGINS</div>
-        <!-- search bar -->
-        <div class="searchbar">
-          <form action="" class="search-container">
-            <img src="img/search-svgrepo-com 1.svg" alt="search-icon">
-            <input type="text" name="" id="search-item" placeholder="Введите название..." onkeyup="search();"  onkeydown="return (event.keyCode!=13);">
-          </form>
-        </div>
-        <!-- PLUGIN CARDS -->
-        <div class="cards_wrapper" id="card-list" />
+          </div>
+        </a>
       </div>
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer>
-    <div class="dmca">
-      <div class="disclaimer">DMCA</div>
-      <p class="disclaimer-text">EMPTY is in compliance with 17 U.S.C. § 512 and the Digital Millennium Copyright Act
-        (“DMCA”). It is our policy to respond to any infringement notices and take appropriate actions under the Digital
-        Millennium Copyright Act (“DMCA”) and other applicable intellectual property laws.
-        DMCA
-        EMPTY is a hosting site dedicated to hosting trial versions of software with activation tools for educational
-        purposes only. The provided content is stored only on third-party servers. We do not adhere to any kind of copyright
-        infridgement.
-        With that said, DMCA
-        EMPTY is still a public hosting site with a lot of user-generated content.
-        In case of copyright infridgement the supposed content owner should contact dmca related support at:
-        support@empty.com</p>
-    </div>
-    <p class="copyright">©️ 2023 БИТМЕЙКЕРСКАЯ ALL RIGHTS RESERVED</p>
-    <a class="credits" href="https://github.com/IHAVEProblem">THANKS TO <span>IHAVEProblem</span></a>
-  </footer>
-
-
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <div class="dmca">
+        <div class="disclaimer">DMCA</div>
+        <p class="disclaimer-text">EMPTY is in compliance with 17 U.S.C. § 512 and the Digital Millennium Copyright Act
+          (“DMCA”). It is our policy to respond to any infringement notices and take appropriate actions under the Digital
+          Millennium Copyright Act (“DMCA”) and other applicable intellectual property laws.
+          DMCA
+          EMPTY is a hosting site dedicated to hosting trial versions of software with activation tools for educational
+          purposes only. The provided content is stored only on third-party servers. We do not adhere to any kind of copyright
+          infridgement.
+          With that said, DMCA
+          EMPTY is still a public hosting site with a lot of user-generated content.
+          In case of copyright infridgement the supposed content owner should contact dmca related support at:
+          support@empty.com</p>
+      </div>
+      <p class="copyright">©️ 2023 БИТМЕЙКЕРСКАЯ ALL RIGHTS RESERVED</p>
+      <a class="credits" href="https://github.com/IHAVEProblem">THANKS TO <span>IHAVEProblem</span></a>
+    </footer>
   </div>
-  <script src="app.js"></script>
 </body>
 </html>

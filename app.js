@@ -28,9 +28,6 @@ lightModeToggle.addEventListener('click', () => {
   }
 })
 
-
-
-
 // append cards
 
 const cards = [
@@ -71,10 +68,12 @@ const search = () => {
 
   for (let i = 0; i < cardName.length; i++) {
     const match = card[i].getElementsByTagName("p")[0]
+    const match2 = card[i].getElementsByTagName("p")[1]
 
     if (match){
       let textValue = match.textContent || match.innerHTML
-      if (textValue.toUpperCase().indexOf(searchBox) > -1){
+      let textValue2 = match2.textContent || match2.innerHTML
+      if (textValue.toUpperCase().indexOf(searchBox) > -1 || textValue2.toUpperCase().indexOf(searchBox) > -1){
         card[i].style.display = '';
       } else {
         card[i].style.display = 'none';
