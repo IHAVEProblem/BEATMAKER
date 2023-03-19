@@ -15,16 +15,16 @@ const disableLightMode = () => {
 }
 
 if (lightMode === 'enabled') {
-  enableLightMode();
+  enableLightMode()
 }
 
 lightModeToggle.addEventListener('click', () => {
   lightMode = localStorage.getItem('lightMode')
 
   if (lightMode !== 'enabled') {
-    enableLightMode();
+    enableLightMode()
   } else {
-    disableLightMode();
+    disableLightMode()
   }
 })
 
@@ -32,21 +32,22 @@ lightModeToggle.addEventListener('click', () => {
 
 const cards = [
   {
-    img: "img/ableton 1.svg",
-    name: "Line",
-    publisher: "Ableton",
-    version: "11.2.6",
-    source: "source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent"
+    img: 'img/ableton 1.svg',
+    name: 'Line',
+    publisher: 'Ableton',
+    version: '11.2.6',
+    source:
+      'source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent',
   },
   {
-    img: "img/flstudio 1.svg",
-    name: "FL studio",
-    version: "14.14.14"
-  }
+    img: 'img/flstudio 1.svg',
+    name: 'FL studio',
+    version: '14.14.14',
+  },
 ]
-const cardsContainer = document.getElementById("card-list")
+const cardsContainer = document.getElementById('card-list')
 
-for(let i = 0; i < cards.length; i++){
+for (let i = 0; i < cards.length; i++) {
   cardsContainer.innerHTML += `
   <a class="card" href="${cards[i].source}" download>
   <img class="card_image" src="${cards[i].img}" alt="">
@@ -61,22 +62,23 @@ for(let i = 0; i < cards.length; i++){
 // search
 
 const search = () => {
-  const searchBox = document.getElementById('search-item').value.toUpperCase();
+  const searchBox = document.getElementById('search-item').value.toUpperCase()
   const storeItems = document.getElementById('card-list')
   const card = document.querySelectorAll('.card')
-  const cardName = storeItems.getElementsByTagName("p")
+  const cardName = storeItems.getElementsByTagName('p')
 
   for (let i = 0; i < cardName.length; i++) {
-    const match = card[i].getElementsByTagName("p")[0]
-    const match2 = card[i].getElementsByTagName("p")[1]
+    const match = card[i].getElementsByTagName('p')[0]
+    const match2 = card[i].getElementsByTagName('p')[1]
 
-    if (match){
+    if (match || match2) {
       let textValue = match.textContent || match.innerHTML
       let textValue2 = match2.textContent || match2.innerHTML
-      if (textValue.toUpperCase().indexOf(searchBox) > -1 || textValue2.toUpperCase().indexOf(searchBox) > -1){
-        card[i].style.display = '';
+      let allTextValue = textValue + ' ' + textValue2
+      if (allTextValue.toUpperCase().indexOf(searchBox) > -1) {
+        card[i].style.display = ''
       } else {
-        card[i].style.display = 'none';
+        card[i].style.display = 'none'
       }
     }
   }
