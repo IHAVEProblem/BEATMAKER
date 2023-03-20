@@ -40,46 +40,65 @@ const cards = [
       'source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent',
   },
   {
-    img: 'img/flstudio 1.svg',
-    name: 'FL studio',
-    version: '14.14.14',
+    img: 'img/ableton 1.svg',
+    name: 'Line',
+    publisher: 'Ableton',
+    version: '11.2.6',
+    source:
+      'source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent',
+  },
+  {
+    img: 'img/ableton 1.svg',
+    name: '11',
+    publisher: 'lfssfsfle',
+    version: '11.2.6',
+    source:
+      'source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent',
+  },
+  {
+    img: 'img/ableton 1.svg',
+    name: 'Net',
+    publisher: 'eeeeett',
+    version: '11.2.6',
+    source:
+      'source/Image_Line_FL_Studio_Producer_Edition_20_8_4_2576_RePack_by_Zom.torrent',
   },
 ]
-const cardsContainer = document.getElementById('card-list')
 
-for (let i = 0; i < cards.length; i++) {
-  cardsContainer.innerHTML += `
-  <a class="card" href="${cards[i].source}" download>
-  <img class="card_image" src="${cards[i].img}" alt="">
-    <div class="card-info">
-      <p class='card_name card_text'>${cards[i].name}</p>
-      <p class='card_subname card_text'>${cards[i].publisher}</p>
-      <p class='card_version card_text'>${cards[i].version}</p>
-    </div>
-  </a>`
+const cardsList = document.getElementById('card-list')
+
+const displayCards = (cardList) => {
+  const htmlString = cardList
+    .map((cardList) => {
+      return `
+          <a class="card" href="${cardList.source}" download>
+          <img class="card_image" src="${cardList.img}" alt="">
+            <div class="card-info">
+              <p class='card_name card_text'>${cardList.name}</p>
+              <p class='card_subname card_text'>${cardList.publisher}</p>
+              <p class='card_version card_text'>${cardList.version}</p>
+            </div>
+          </a>
+        `
+    })
+    .join('')
+  cardsList.innerHTML = htmlString
 }
 
-// search
+displayCards(cards)
 
-const search = () => {
-  const searchBox = document.getElementById('search-item').value.toUpperCase()
-  const storeItems = document.getElementById('card-list')
-  const card = document.querySelectorAll('.card')
-  const cardName = storeItems.getElementsByTagName('p')
+// new Search
 
-  for (let i = 0; i < cardName.length; i++) {
-    const match = card[i].getElementsByTagName('p')[0]
-    const match2 = card[i].getElementsByTagName('p')[1]
+const searchBar = document.getElementById('search-item')
 
-    if (match || match2) {
-      let textValue = match.textContent || match.innerHTML
-      let textValue2 = match2.textContent || match2.innerHTML
-      let allTextValue = textValue + ' ' + textValue2
-      if (allTextValue.toUpperCase().indexOf(searchBox) > -1) {
-        card[i].style.display = ''
-      } else {
-        card[i].style.display = 'none'
-      }
-    }
-  }
-}
+searchBar.addEventListener('keyup', (e) => {
+  const searchString = e.target.value.toLowerCase()
+
+  const filteredCards = cards.filter((card) => {
+    return (
+      card.name.toLowerCase().includes(searchString) ||
+      card.publisher.toLowerCase().includes(searchString)
+    )
+  })
+  displayCards(filteredCards)
+})
