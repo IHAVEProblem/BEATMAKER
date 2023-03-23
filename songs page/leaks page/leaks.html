@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <title>EMPTY LEAKS</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header_logo"><span tabindex="1">EMPTY</span></a>
+      <button
+        class="light-mode-toggle"
+        id="light-mode-toggle"
+        aria-label="toggle light mode">
+        <svg
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 496">
+          <path
+            fill="currentColor"
+            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+            transform="translate(-8 -8)" />
+        </svg>
+      </button>
+    </header>
+    <main class="page">
+      <div class="music-list">
+        <div class="header">
+          <div class="row">
+            <i class="list material-icons">queue_music</i>
+            <span>Music list</span>
+          </div>
+          <i id="close" class="material-icons">close</i>
+        </div>
+        <ul>
+          <!-- here li list are coming from js -->
+        </ul>
+      </div>
+      <div class="wrapper">
+        <div class="img-area">
+          <img src="" alt="" />
+        </div>
+        <div class="song-details">
+          <p class="name"></p>
+          <p class="artist"></p>
+        </div>
+        <i class="material-icons volume" onclick="handleVolume()">volume_up</i>
+        <input
+          type="range"
+          class="volume-range"
+          step="1"
+          value="80"
+          min="0"
+          max="100"
+          oninput="mainAudio.volume = this.value/100" />
+        <div class="progress-area">
+          <div class="progress-bar">
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="song-timer">
+            <span class="current-time"></span>
+            <span class="max-duration"></span>
+          </div>
+        </div>
+        <div class="controls">
+          <i id="repeat-plist" class="material-icons" title="Playlist looped"
+            >repeat</i
+          >
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="play-pause">
+            <i class="material-icons play">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+      </div>
+    </main>
+    <!-- <footer>
+      <div class="dmca">
+        <div class="disclaimer">DMCA</div>
+        <p class="disclaimer-text">
+          EMPTY is in compliance with 17 U.S.C. § 512 and the Digital Millennium
+          Copyright Act (“DMCA”). It is our policy to respond to any
+          infringement notices and take appropriate actions under the Digital
+          Millennium Copyright Act (“DMCA”) and other applicable intellectual
+          property laws. DMCA EMPTY is a hosting site dedicated to hosting trial
+          versions of software with activation tools for educational purposes
+          only. The provided content is stored only on third-party servers. We
+          do not adhere to any kind of copyright infridgement. With that said,
+          DMCA EMPTY is still a public hosting site with a lot of user-generated
+          content. In case of copyright infridgement the supposed content owner
+          should contact dmca related support at: support@empty.com
+        </p>
+      </div>
+      <p class="copyright">©️ 2023 БИТМЕЙКЕРСКАЯ ALL RIGHTS RESERVED</p>
+      <a class="credits" href="https://github.com/IHAVEProblem"
+        >THANKS TO <span>IHAVEProblem</span></a
+      >
+    </footer> -->
+    <script src="music-list.js"></script>
+    <script src="leaks.js"></script>
+  </body>
+</html>

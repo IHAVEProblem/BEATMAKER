@@ -1,47 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* roots */
@@ -50,7 +131,7 @@ table {
   --clr-light: #fff;
   --clr-dark: #202020;
   --clr-gray: #313131;
-  --clr-accent: #8784E1;
+  --clr-accent: #8784e1;
 
   --foreground: var(--clr-light);
   --background: var(--clr-dark);
@@ -76,7 +157,6 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-
 .flex-wrapper {
   min-height: 100vh;
   display: flex;
@@ -84,10 +164,9 @@ body {
   /* overflow: hidden; */
 }
 
-.page{
+.page {
   flex: 1 1 auto;
 }
-
 
 /* container */
 
@@ -100,42 +179,42 @@ body {
 }
 
 /* header */
-.header_logo{
+.header_logo {
   font-size: 50px;
   font-weight: bold;
-  margin-top: 39px;
-  margin-bottom: 46px;
+  margin: 30px 0;
   padding: 10px;
 }
 
 .header_logo > span {
-  background: linear-gradient(to right, crimson, #01A5F8, #d801d8);
+  background: linear-gradient(to right, crimson, #01a5f8, #d801d8);
   background-size: 200% 200%;
   animation: pretty 5s ease-in-out infinite;
   background-clip: text;
   -webkit-background-clip: text;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-.header_logo > span:hover, .header_logo > span:focus{
+.header_logo > span:hover,
+.header_logo > span:focus {
   color: rgba(0, 0, 0, 0);
 }
 
 @keyframes pretty {
   0% {
-    background-position: left
+    background-position: left;
   }
   25% {
-    background-position: right
+    background-position: right;
   }
   50% {
-    background-position: left
+    background-position: left;
   }
   75% {
-    background-position: right
+    background-position: right;
   }
   100% {
-    background-position: left
+    background-position: left;
   }
 }
 
@@ -154,16 +233,16 @@ body {
   border-radius: 5px;
   width: 40px;
   height: 40px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.light-mode-toggle:hover{
+.light-mode-toggle:hover {
   scale: 1.1;
 }
 
 /* main */
 
-.page-content{
+.page-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -180,19 +259,19 @@ body {
   text-decoration: none;
 }
 
-.card img{
+.card img {
   max-width: 500px;
   object-fit: cover;
   filter: blur(2px);
   transition: 0.3s;
 }
 
-.card:hover img{
+.card:hover img {
   scale: 1.05;
   filter: blur(4px);
 }
 
-.card-title{
+.card-title {
   font-size: 24px;
   font-weight: bold;
 
@@ -203,7 +282,7 @@ body {
   transition: 0.3s;
 }
 
-.text-content{
+.text-content {
   font-size: 18px;
   width: 300px;
   opacity: 0;
@@ -214,17 +293,17 @@ body {
   transition: 0.3s;
 }
 
-.card-text{
+.card-text {
   margin-bottom: 10px;
 }
 
-.card:hover .card-title{
+.card:hover .card-title {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
 }
 
-.card:hover .text-content{
+.card:hover .text-content {
   opacity: 1;
   top: 60%;
   left: 50%;
@@ -232,46 +311,45 @@ body {
 }
 
 /* footer */
-footer{
+footer {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.dmca{
+.dmca {
   margin: 20px;
-    color: var(--foreground, #fff);
-    font-size: 12px;
-    font-weight: bold;
-    max-width: 800px;
+  color: var(--foreground, #fff);
+  font-size: 12px;
+  font-weight: bold;
+  max-width: 800px;
 }
 
 .disclaimer {
-    font-size: 24px;
-    color: #8784E1;
-    margin-bottom: 15px;
+  font-size: 24px;
+  color: #8784e1;
+  margin-bottom: 15px;
 }
-.copyright{
-  padding: 15px ;
+.copyright {
+  padding: 15px;
 
   font-size: 12px;
   font-weight: bold;
 }
 
 .credits {
-    padding: 20px;
-    color: var(--foreground, #fff);
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
+  padding: 20px;
+  color: var(--foreground, #fff);
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.credits span{
+.credits span {
+  color: #8784e1;
 
-    color: #8784E1;
-
-    text-decoration: underline;
+  text-decoration: underline;
 }
