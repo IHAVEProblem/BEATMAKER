@@ -85,7 +85,7 @@ const displayCards = (arr) => {
       isRaw = false,
       isSynth = false,
     }) => {
-      if (isRaw === true) {
+      if (isRaw) {
         rawList.innerHTML += `
             <a class="card" href="${source}" download>
             <img class="card_image" src="${img}" alt="">
@@ -96,7 +96,7 @@ const displayCards = (arr) => {
               </div>
             </a>
           `
-      } else if (isSynth === true) {
+      } else if (isSynth) {
         synthList.innerHTML += `
             <a class="card" href="${source}" download>
             <img class="card_image" src="${img}" alt="">
