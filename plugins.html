@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="plugins-style.css" />
+  <title>BEATMAKER</title>
+</head>
+
+<body>
+  <div class="flex-wrapper">
+
+    <!-- HEADER -->
+
+    <header>
+      <h1 class="header_logo"><span tabindex="1">EMPTY</span></h1>
+      <!-- LIGHT MODE BTN-->
+      <button class="light-mode-toggle" id="light-mode-toggle" aria-label="toggle light mode">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+          <path fill="currentColor"
+            d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+            transform="translate(-8 -8)" />
+        </svg>
+      </button>
+      <!-- HERO SECTION -->
+      <section class="hero-container">
+        <div class="hero-img">
+          <div class="music-el">
+            <div class="line1 line"></div>
+            <div class="line2 line"></div>
+            <div class="line3 line"></div>
+            <div class="line4 line"></div>
+            <div class="line5 line"></div>
+            <div class="line6 line"></div>
+          </div>
+        </div>
+        <div class="hero-article">
+
+          <h1 class="some-text">Explore our plugin collection and start creating your next hit!</h1>
+          <p class="article-text">Create your masterpiece with our vast collection of plugins. From synthesizers
+            to effects, we have everything you
+            need to produce professional-quality tracks. Explore our extensive library and take your music to the next
+            level.</p>
+          <div class="some-container">
+            <a href="#plugins" class="article-btn">Explore</a>
+
+            <div class="social-links">
+              <a href="#">
+                <img src="img/VK.com-logo.svg" alt="">
+              </a>
+              <a href="#">
+                <img src="img/Instagram_logo_2016.svg" alt="">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="page">
+      <div class="main_page _container" ">
+        <div class=" dmca">
+        <div class="disclaimer">DMCA</div>
+        <p class="disclaimer-text">
+          EMPTY is in compliance with 17 U.S.C. § 512 and the Digital
+          Millennium Copyright Act (“DMCA”). It is our policy to respond to
+          any infringement notices and take appropriate actions under the
+          Digital Millennium Copyright Act (“DMCA”) and other applicable
+          intellectual property laws. DMCA EMPTY is a hosting site dedicated
+          to hosting trial versions of software with activation tools for
+          educational purposes only. The provided content is stored only on
+          third-party servers. We do not adhere to any kind of copyright
+          infridgement. With that said, DMCA EMPTY is still a public hosting
+          site with a lot of user-generated content. In case of copyright
+          infridgement the supposed content owner should contact dmca related
+          support at: support@empty.com
+        </p>
+      </div>
+      <div class="search-continer">
+        <div class="btn-container"></div>
+        <!-- search bar -->
+        <div class="searchbar">
+          <form action="" class="search-container">
+            <img src="plugin-img/search-svgrepo-com 1.svg" alt="search-icon" />
+            <input type="text" name="searchPlugin" id="search-item" placeholder="Search..."
+              onkeydown="return (event.keyCode!=13);" />
+          </form>
+        </div>
+      </div>
+      <article class="plugin-contianer" id="plugins">
+        <!-- PLUGIN CARDS go here -->
+        <div class=" cards_wrapper" id="card-list">
+        </div>
+      </article>
+      <!-- filter tags -->
+  </div>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p class="copyright">&copy; <span id="date">2023</span> EMPTY ALL RIGHTS RESERVED</p>
+
+  </footer>
+  </div>
+  <script src="plugins.js"></script>
+</body>
+
+</html>
